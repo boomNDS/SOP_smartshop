@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
-@EnableAutoConfiguration
+//@RestController
+//@EnableAutoConfiguration
 public class ShopApplication {
 	@RequestMapping("/")
 	String home() {
@@ -27,25 +27,25 @@ public class ShopApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShopApplication.class, args);
 	}
-	@RequestMapping("/shop")
-	public List<item> allsales(){
-		return  Store.getAllItem();
-	}
-	@RequestMapping("/foods")
-	public List<item> allFood(){
-		return  Store.getCategory("food");
-	}
-	@RequestMapping("/computers")
-	public List<item> allComputers(){
-		return  Store.getCategory("computer");
-	}
-	@RequestMapping("/medicine")
-	public List<item> allMedicine(){
-		return Store.getCategory("medicine");
-	}
-	@RequestMapping(value = "/costlower/{cost}", method = RequestMethod.GET)
-	public List<item> CostLower(@PathVariable int cost){
-		return Store.getCostlower(cost);
-	}
+//	@RequestMapping("/shop")
+//	public List<item> allsales(){
+//		return  Store.getAllItem();
+//	}
+//	@RequestMapping("/foods")
+//	public List<item> allFood(){
+//		return  Store.getCategory("food");
+//	}
+//	@RequestMapping("/computers")
+//	public List<item> allComputers(){
+//		return  Store.getCategory("computer");
+//	}
+//	@RequestMapping("/medicine")
+//	public List<item> allMedicine(){
+//		return Store.getCategory("medicine");
+//	}
+//	@RequestMapping(value = "/costlower/{cost}", method = RequestMethod.GET)
+//	public List<item> CostLower(@PathVariable int cost){
+//		return Store.getCostlower(cost);
+//	}
 
 }
